@@ -10,6 +10,7 @@
 
 <body class="page-body" bgcolor="lightgrey">
 
+  <!-- Header -->
   <header class="page-header">
     <a class="page-header__logo" href="##">
       <img src="./img/icons/pink-icon-mobile.svg" width="74" height="23" alt="Pink">
@@ -21,28 +22,30 @@
       </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current">
-            <a class="site-list__item-link">Главная</a>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--current">Главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__item-link" href="catalog.html">Фотографии</a>
+            <a class="site-list__link" href="catalog.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__item-link" href="form.html">Конкурс</a>
+            <a class="site-list__link" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__item-link" href="##">HTML ACADEMY</a>
+            <a class="site-list__link" href="##">HTML ACADEMY</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
+
+  <!-- Main -->
   <main class="page-main">
     <h1 class="visually-hidden">Приложение "Pink"</h1>
     <section class="cover-main">
-      <div class="cover-main__wrapper">
-        <img class="cover-main__image" src="./img/main/back-wallpaper.jpg" alt="">
-        <h2 class="cover-main__title">Взгляните на жизнь иначе!</h2>
+      <div class="cover-main__image">
+        <img class="cover-main__back-wallpaper" src="./img/main/back-wallpaper.jpg" alt="">
+        <h2 class="ccover-main__title">Взгляните на жизнь иначе!</h2>
         <img class="cover-main__phone" src="./img/main/phone-main.jpg" alt="Phone" width="320" height="286">
         <img class="cover-main__screen" src="./img/main/screen-main.jpg" alt="Screen" width="111" height="197">
         <div class="cover-main-app">
@@ -50,21 +53,20 @@
           <ul class="cover-main-app__list">
             <li class="cover-main-app__item">
               <img class="cover-main-app__icon" src="./img/main/apple-logo.svg" alt="apple">
-              </a>
             </li>
             <li class="cover-main-app__item">
               <img class="cover-main-app__icon" src="./img/main/android-logo.svg" alt="android">
-              </a>
             </li>
             <li class="cover-main-app__item">
               <img class="cover-main-app__icon" src="./img/main/microsoft-logo.svg" alt="microsoft">
-              </a>
             </li>
           </ul>
           <p class="cover-main-app-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </div>
     </section>
+
+    <!-- Главная информация -->
     <section class="main-information">
       <div class="main-information__titles">
         <p class="main-information__title">Устали от серости мегаполиса?</p>
@@ -94,6 +96,7 @@
       </div>
     </section>
 
+<!-- Отзывы -->
     <section class="slider-reviews">
       <h2 class="visually-hidden">Отзывы</h2>
       <p class="slider-reviews__author">Николай Петров</p>
@@ -102,12 +105,13 @@
           привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
       </blockquote>
       <div class="slider-reviews__dots">
-        <button class="slider-reviews__button slider-reviews__button--current" type="button"
-          aria-label="1"></button>
+        <button class="slider-reviews__button slider-reviews__button--current" type="button" aria-label="1"></button>
         <button class="slider-reviews__button" type="button" aria-label="2"></button>
         <button class="slider-reviews__button" type="button" aria-label="3"></button>
       </div>
     </section>
+
+    <!-- Цены -->
     <div class="price">
       <h2 class="visually-hidden">Стоимость приложения</h2>
       <div class="price__header">
@@ -139,12 +143,13 @@
           </tr>
         </table>
       </div>
-      <div class="slider-reviews__controls">
-        <button class="slider-reviews__controls-button" type="button" aria-label="1"></button>
-        <button class="slider-reviews__controls-button slider-reviews__controls-button--current" type="button"
-          aria-label="2"></button>
-        <button class="slider-reviews__controls-button" type="button" aria-label="3"></button>
+      <div class="slider-reviews__dots">
+        <button class="slider-reviews__button" type="button" aria-label="1"></button>
+        <button class="slider-reviews__button slider-reviews__button--current" type="button" aria-label="2"></button>
+        <button class="slider-reviews__button" type="button" aria-label="3"></button>
       </div>
+
+      <!-- Контакты -->
       <div class="contacts">
         <h2 class="contacts__main-title">Остались вопросы? <br> Свяжитесь с нами!</h2>
         <p class="contacts__phone contacts__item">
@@ -163,34 +168,37 @@
       </div>
   </main>
 
-  <footer class="page-footer__content">
-    <img src="./img/footer/glasses.svg" alt="glasses">
-    <img src="./img/icons/pink-icon-mobile.svg" alt="pink">
-    <div class="social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link" href="##">
-            <img class="social__icon" src="./img/footer/twitter-icon.svg" alt="twitter">
-            <span class="visually-hidden">Твиттер</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="##">
-            <img class="social__icon" src="./img/footer/facebook-icon.svg" alt="facebook">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="##">
-            <img class="social__icon" src="./img/footer/youtube-icon.svg" alt="youtube">
-            <span class="visually-hidden">Ютуб</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="developed">
-      <span class="developed__text">Разработано</span>
-      <img src="./img/footer/html-academy-icon.svg" alt="html-academy">
+<!-- Футер -->
+  <footer class="page-footer">
+    <div class="page-footer__content">
+      <img src="./img/footer/glasses.svg" alt="glasses">
+      <img src="./img/icons/pink-icon-mobile.svg" alt="pink">
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" href="##">
+              <img class="social__icon" src="./img/footer/twitter-icon.svg" alt="twitter">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="##">
+              <img class="social__icon" src="./img/footer/facebook-icon.svg" alt="facebook">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="##">
+              <img class="social__icon" src="./img/footer/youtube-icon.svg" alt="youtube">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="developed">
+        <span class="developed__text">Разработано</span>
+        <img src="./img/footer/html-academy-icon.svg" alt="html-academy">
+      </div>
     </div>
   </footer>
 
