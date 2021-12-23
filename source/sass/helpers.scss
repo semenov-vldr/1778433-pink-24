@@ -1,0 +1,30 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.center {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: $desktop-width) {
+  .center {
+    padding: 0 130px;
+  }
+}
+
+/* Сброс стилей списка */
+.reset-style-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

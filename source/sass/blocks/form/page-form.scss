@@ -1,85 +1,213 @@
 .form {
   background-color: #ffffff;
+}
 
-  &__title {
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: 400;
-    margin: 0;
-    text-align: center;
+.form__user {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(276px, 1fr));
+}
+
+.form__title {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+.form__title span {
+  display: none;
+}
+
+.form__wrapper {
+  background-color: $lightgrey;
+}
+
+.form__user-item {
+  padding: 42px 0;
+}
+
+.form__user-label {
+  color: $crimson;
+  line-height: 30px;
+  padding: 0 24px;
+  text-transform: uppercase;
+}
+
+.form__user-input {
+  width: 100%;
+  padding: 23px 20px;
+}
+
+.form__user-input[placeholder] {
+  color: $darkblue;
+  font-size: 18px;
+}
+
+/* Список достижений */
+
+.form__user-progress-item {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.form__user-progress-item:not(:last-child) {
+  margin-bottom: 47px;
+}
+
+/* Заголовки чек-бокса, радио-кнопок и комментариев */
+.form__user-item-title {
+  text-transform: uppercase;
+  color: $crimson;
+  text-align: center;
+}
+
+/* Список OS */
+.form__user-OS-item {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+/* "Опишите свои эмоции" */
+.form__wrapper--comment {
+  background-color: #ffffff;
+}
+
+.form__user-comment-area {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+/* Кнопка "Отправить форму" */
+.form__button-wrapper {
+  background-color: #ffffff;
+}
+
+.form__button--green {
+  background-color: #2aab6d;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.form__button {
+  width: 100%;
+  padding: 23px 10px;
+  margin-bottom: 46px;
+}
+
+.form__prompt {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+/* Планшет */
+@media (min-width: $tablet-width) {
+  .cover-main__title {
+    font-size: 50px;
+    width: 620px;
   }
 
-  &__wrapper {
-    background-color: $lightgrey;
-  }
-
-  &__user-item {
-    padding: 42px 0;
-  }
-
-  &__user-label {
-    color: $crimson;
-    line-height: 30px;
-    padding: 0 24px;
-    text-transform: uppercase;
-  }
-
-  &__user-input {
-    width: 100%;
-    padding: 23px 20px;
-    box-sizing: border-box;
-  }
-
-  &__user-input[placeholder] {
-    color: $darkblue;
+  .form__title {
+    padding: 100px 0 82px 0;
+    width: 490px;
     font-size: 18px;
+    margin: 0 auto;
   }
 
-  /* Список достижений */
-
-  &__user-progress-item {
-    font-size: 18px;
-    line-height: 30px;
-  }
-
-  &__user-progress-item:not(:last-child) {
-    margin-bottom: 47px;
-  }
-
-  /* Заголовки чек-бокса, радио-кнопок и комментариев */
-  &__user-item-title {
-    text-transform: uppercase;
-    color: $crimson;
-    text-align: center;
-  }
-
-  /* Список OS */
-  &__user-OS-item {
-    font-size: 18px;
-    line-height: 30px;
-  }
-
-  &__user-comment-area {
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    font-size: 18px;
-    line-height: 30px;
-  }
-
-  &__button-wrapper {
-    background-color: #ffffff;
-  }
-
-  &__button {
-    width: 100%;
-    padding: 23px 10px;
-    margin-bottom: 46px;
-  }
-
-  &__prompt {
+  .form__title span {
     display: block;
-    text-transform: uppercase;
-    text-align: center;
+    font-size: 18px;
   }
+
+  .form__user {
+    grid-template-columns: repeat(auto-fill, minmax(616px, 1fr));
+  }
+
+  .form__wrapper {
+    background-color: #ffffff;
+    margin: 0;
+  }
+
+  .form__user-item {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .form__user-label {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0;
+  }
+
+  .form__user-input {
+    margin-left: 20px;
+  }
+
+  .form__wrapper--name {
+    order: 1;
+  }
+
+  .form__wrapper--progress {
+    order: 4;
+  }
+
+  .form__wrapper--contact {
+    order: 3;
+  }
+
+  .form__wrapper--OS {
+    order: 2;
+  }
+
+  .form__wrapper--comment {
+    width: 496px;
+    margin: 0 auto;
+    padding: 0;
+    order: 5;
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 6;
+    margin: 0;
+  }
+
+  .form__button {
+    width: 296px;
+    margin: 0;
+  }
+}
+
+
+/* Desktop */
+@media (min-width: $desktop-width) {
+.form__user {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form__title, .form__wrapper, .form__button-wrapper {
+  grid-column: 1 / -1;
+}
+
+.form__wrapper--name {
+  grid-column: 1/2;
+}
+
+.form__wrapper--OS {
+  grid-column: 2/3;
+}
+
 }

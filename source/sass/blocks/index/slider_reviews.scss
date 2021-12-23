@@ -1,22 +1,65 @@
 .slider-reviews {
   background-color: #ffffff;
   // margin-top: -43px;
+}
 
-  &__author {
+.slider-reviews__author {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  margin: 0;
+}
+
+.slider-reviews__author-details {
+  display: none;
+}
+
+.slider-reviews__quote {
+  line-height: 30px;
+  text-align: center;
+  margin: 0;
+}
+
+.slider-reviews__dots {
+  text-align: center;
+}
+
+
+/* Планшет */
+@media (min-width: $tablet-width) {
+  .slider-reviews__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider-reviews__author-details {
+    display: block;
+    text-align: center;
+    margin: 0;
+  }
+
+  .slider-reviews__quote {
+    order: -1;
+  }
+
+  .slider-reviews__quote-text {
     font-size: 18px;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: center;
-    margin: 0;
   }
 
-  &__quote {
-    line-height: 30px;
-    text-align: center;
-    margin: 0;
+  .slider-reviews__quote-text br {
+    display: none;
+  }
+}
+
+
+/* Desktop */
+@media (min-width: $desktop-width) {
+  .slider-reviews__wrapper {
+    width: 690px;
   }
 
-  &__dots {
-    text-align: center;
+  .slider-reviews__dots {
+    display: none;
   }
 }

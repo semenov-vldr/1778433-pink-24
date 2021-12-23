@@ -25,16 +25,16 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list reset-style-list">
             <li class="main-nav__item main-nav__item--current">
-              <a class="main-nav__item-link" href="##">Главная</a>
+              <a class="main-nav__link" href="##">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__item-link" href="catalog.html">Фотографии</a>
+              <a class="main-nav__link" href="catalog.html">Фотографии</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__item-link" href="form.html">Конкурс</a>
+              <a class="main-nav__link" href="form.html">Конкурс</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__item-link" href="##">HTML ACADEMY</a>
+              <a class="main-nav__link" href="##">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -103,7 +103,30 @@
             </li>
           </ul>
           <div class="features__image-wrapper">
-            <img class="features__iphone" src="./img/features/iphone.png" alt="iphone">
+            <img class="features__iphone" src="./img/features/iphone.png" width="157" alt="iphone">
+          </div>
+          <div class="features__images-desctop">
+            <div class="features__image-1">
+              <img class="features__iphone" src="./img/features/iphone-1-shadow.png" width="300" alt="iphone">
+            </div>
+            <div class="features__image-2">
+              <img class="features__iphone" src="./img/features/iphone-2-shadow.png" width="300" alt="iphone">
+            </div>
+            <div class="features__image-3">
+              <img class="features__iphone" src="./img/features/iphone-3-shadow.png" width="300" alt="iphone">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="features__study">
+          <img class="features__study-timer" src="./img/features/timer.png" width="238" height="276" alt="timer">
+          <div class="features__study-information">
+            <h3 class="features__study-title">Эффект на 24 часа!</h3>
+            <p class="features__study-text">Британские ученые провели исследования
+              и доказали, что положительный эффект
+              от использования приложения длится целые сутки!</p>
+              <a class="features__study-link" href="##">Узнать больше об исследовании</a>
           </div>
         </div>
       </div>
@@ -114,6 +137,7 @@
       <div class="slider-reviews__wrapper center">
         <h2 class="visually-hidden">Отзывы</h2>
         <p class="slider-reviews__author">Николай Петров</p>
+        <p class="slider-reviews__author-details">25 лет, водитель трамвая</p>
         <blockquote class="slider-reviews__quote">
           <p class="slider-reviews__quote-text">«Это приложение перевернуло мой мир <br> и позволило по-новому взглянуть
             на
@@ -133,6 +157,8 @@
     <div class="price">
       <h2 class="visually-hidden">Стоимость приложения</h2>
       <div class="price__wrapper center">
+
+        <!-- Таблица цен для мобильной версии -->
         <table class="price__table">
           <thead class="price__header">
             <tr>
@@ -162,6 +188,68 @@
             </td>
           </tr>
         </table>
+
+<!-- Полная таблица цен -->
+        <table class="price__table-full">
+          <thead class="price__header">
+            <tr>
+              <th></th>
+              <th class="price__title">
+                <p class="price__title-name">База</p>
+                <p class="price__title-value">1,99 USD</p>
+              </th>
+              <th class="price__title">
+                <span class="price__hit">Хит</span>
+                <p class="price__title-name">Стандарт</p>
+                <p class="price__title-value">3,99 USD</p>
+              </th>
+              <th class="price__title">
+                <p class="price__title-name">АНЛИМ</p>
+                <p class="price__title-value">9,99 USD</p>
+              </th>
+            </tr>
+
+          </tr>
+          </thead>
+          <tr>
+            <td class="price__item-text">Розовый фильтр</td>
+            <td class="price__check">
+              <img src="./img/price/yes.svg" alt="yes">
+            </td>
+            <td class="price__check">
+              <img src="./img/price/yes.svg" alt="yes">
+            </td>
+            <td class="price__check">
+              <img src="./img/price/yes.svg" alt="yes">
+            </td>
+
+          </tr>
+          <tr>
+            <td class="price__item-text">Смайлики</td>
+            <td class="price__check">
+              <img src="./img/price/no.svg" alt="no">
+            </td>
+            <td class="price__check">
+              <img src="./img/price/yes.svg" alt="yes">
+            </td>
+            <td class="price__check">
+              <img src="./img/price/yes.svg" alt="yes">
+            </td>
+          </tr>
+          <tr>
+            <td class="price__item-text">Комментарии</td>
+            <td class="price__check">
+              <img src="./img/price/no.svg" alt="no">
+            </td>
+            <td class="price__check">
+              <img src="./img/price/no.svg" alt="no">
+            </td>
+            <td class="price__check">
+              <img src="./img/price/yes.svg" alt="yes">
+            </td>
+          </tr>
+
+        </table>
       </div>
 
       <!-- Пагинация цен -->
@@ -176,18 +264,18 @@
     <div class="contacts">
       <div class="contacts__wrapper center">
         <h2 class="contacts__main-title">Остались вопросы? <br> Свяжитесь с нами!</h2>
-        <p class="contacts__phone">
+        <div class="contacts__phone">
           <h3 class="contacts__title">Звоните:</h3>
           <a class="contacts__number-phone contacts__item" href="tel:+78125556666">+7 (812) 555-66-66</a>
-        </p>
-        <p class="contacts__email">
+        </div>
+        <div class="contacts__email">
           <h3 class="contacts__title">Пишите:</h3>
           <a class="contacts__email-text contacts__item" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="contacts__adress">
+        </div>
+        <div class="contacts__adress">
           <h3 class="contacts__title">Приезжайте в гости:</h3>
           <address class="contacts__adress-text contacts__item">ул. Большая Конюшенная, 19/8</address>
-        </p>
+        </div>
       </div>
       <img class="contacts__map" src="./img/contacts/map.jpg" width="320" alt="Map">
     </div>
@@ -196,8 +284,8 @@
   <!-- Footer -->
   <footer class="page-footer">
     <div class="page-footer__wrapper center">
-      <img src="./img/footer/glasses.svg" alt="glasses">
-      <img src="./img/footer/pink-black.png" alt="pink">
+      <img src="./img/footer/glasses.svg" alt="glasses" width="59" height="40">
+      <img src="./img/footer/pink-black.png" alt="pink" width="74" height="23">
       <div class="social">
         <ul class="social__list reset-style-list">
           <li class="social__item">

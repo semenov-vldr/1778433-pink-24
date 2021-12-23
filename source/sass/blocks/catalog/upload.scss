@@ -1,45 +1,135 @@
 .upload {
-  &__title-wrapper {
+  background-color: $lightgrey;
+}
+
+.upload__title-wrapper {
+  background-color: #ffffff;
+}
+
+.upload__title {
+  margin: 0;
+  width: 280px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.upload__container {
+  background-color: $lightgrey;
+  padding: 20px 0 40px 0;
+}
+
+.upload__filter-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin: 43px 0 34px 0;
+}
+
+.upload__filter-range {
+  margin-bottom: 66px;
+  width: 100%;
+}
+
+.upload__filter-item input {
+  display: none;
+}
+
+/* Кнопки "Запостить" и "Отмена" (Каталог) */
+.upload__button {
+  border: 0;
+  border-radius: 30px;
+  padding: 20px 0;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+/* Запостить */
+.upload__button--submit {
+  width: 100%;
+  outline: 3px solid currentColor;
+  color: $crimson;
+  margin-bottom: 12px;
+}
+
+/* Отмена */
+.upload__button--reset {
+  width: 100%;
+  outline: 3px solid currentColor;
+  color: rgba(40, 54, 69, 0.1);
+}
+
+
+/* Планшет */
+@media (min-width: $tablet-width) {
+
+  .upload {
     background-color: #ffffff;
   }
 
-  &__title {
-    margin: 0;
-    width: 280px;
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: 400;
-    text-align: center;
+  .upload__title {
+    font-size: 18px;
+    width: 422px;
   }
 
-  &__container {
-    background-color: $lightgrey;
-    padding: 20px 0 40px 0;
+  .upload__container {
+    display: grid;
+    grid-template-areas:
+    "A B"
+    "A C";
   }
 
-  &__filter-list {
+  .upload__filter-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    margin: 43px 0 34px 0;
+    flex-direction: column;
   }
 
-  &__filter-range {
-    margin-bottom: 66px;
-    width: 100%;
+  .upload__filter-item {
+    display: flex;
   }
 
-  &__button-post {
-    width: 100%;
-    outline: 3px solid $crimson;
-    color: $crimson;
-    margin-bottom: 12px;
+  .upload__filter-range {
+    display: none;
   }
 
-  &__button-cancel {
-    width: 100%;
-    outline: 3px solid rgba(40, 54, 69, 0.1);
-    color: rgba(40, 54, 69, 0.1);
+  .upload__filter-item input {
+    display: block;
+  }
+
+  .upload__photo {
+    grid-area: A;
+  }
+
+  .upload__filter {
+    grid-area: B;
+  }
+
+  .upload__button-list {
+    grid-area: C;
   }
 }
+
+
+/* Desktop */
+@media (min-width: $desktop-width) {
+  .upload__container {
+    display: grid;
+    grid-template-areas:
+    "A B"
+    "A C";
+  }
+
+  .upload__button-list {
+    display: flex;
+  }
+
+  .upload__button {
+    padding: 0;
+    margin: 0;
+    width: 183px;
+  }
+}
+

@@ -1,23 +1,37 @@
 .page-footer {
   background-color: #ffffff;
   padding: 40px 0;
-
-  &__wrapper {
-    text-align: center;
-  }
 }
 
-.social {
-  &__list {
+.page-footer__wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.social__list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.social__item {
+  border: 3px solid rgb(40, 54, 69, 0.1);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+
+/* Планшет */
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper {
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin: 40px 0;
+    align-items: center;
+    justify-content: space-around;
   }
 
-  &__item {
-    border: 3px solid rgb(40, 54, 69, 0.1);
-    border-radius: 50%;
-    padding: 15px;
+  .developed {
+    display: flex;
   }
 }

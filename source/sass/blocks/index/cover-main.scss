@@ -1,11 +1,11 @@
-
 .cover-main {
   &__wrapper {
     position: relative;
-    background-image: url(/source/img/main/back-wallpaper.jpg);
+    background-image: url();
+
     background-repeat: no-repeat;
     background-position: center;
-    height: 462px;
+    min-height: 462px;
     background-color: #1d2631;
   }
 
@@ -34,6 +34,7 @@
   &__app-link {
     display: block;
     color: #ffffff;
+    text-align: center;
     text-decoration: none;
     font-size: 18px;
     line-height: 18px;
@@ -59,5 +60,47 @@
     font-weight: 300;
     margin: 0;
     margin-top: 28px;
+  }
+}
+
+/* Планшет */
+@media (min-width: $tablet-width) {
+  .cover-main__title {
+    font-size: 40px;
+    line-height: 48px;
+    width: 240px;
+    padding-top: 212px;
+  }
+
+  .cover-main__wrapper {
+    height: 660px;
+  }
+
+  .cover-main__app {
+    position: absolute;
+    padding: 0;
+    bottom: 200px;
+    left: 20px;
+    width: 300px;
+    background: none;
+  }
+
+  .cover-main__app-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cover-main__app-text {
+    font-size: 18px;
+  }
+}
+
+
+/* Desktop */
+@media (min-width: $desktop-width) {
+  .cover-main__app {
+    position: relative;
+    left: 130px;
+    width: 300px;
   }
 }

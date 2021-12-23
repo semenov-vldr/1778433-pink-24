@@ -26,17 +26,17 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list reset-style-list">
-            <li class="main-nav__item ">
-              <a class="main-nav__item-link" href="##">Главная</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="##">Главная</a>
+            </li>
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link" href="catalog.html">Фотографии</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__item-link main-nav__item--current" href="catalog.html">Фотографии</a>
+              <a class="main-nav__link" href="form.html">Конкурс</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__item-link" href="form.html">Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__item-link" href="##">HTML ACADEMY</a>
+              <a class="main-nav__link" href="##">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -69,7 +69,7 @@
                 <p class="photo__item-comment">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую
                   трансляцию в перископе, задавайте свои вопросы!</p>
                 <span>
-                  <img class="photo__item-like" src="./img/icons/heart.svg" alt="like">
+                  <img class="photo__item-like" src="./img/icons/heart.svg" width="13" height="12" alt="like">
                   <span class="photo__item-like-text">Нравится: 215</span>
                 </span>
               </div>
@@ -163,24 +163,29 @@
             <h2 class="upload__title">Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!</h2>
           </div>
           <div class="upload__container">
-            <img src="./img/photo/photo-8-mobile.jpg" width="280" height="374" alt="Фото">
+            <img class="upload__photo" src="./img/photo/photo-8-mobile.jpg" width="280" height="374" alt="Фото">
             <div class="upload__filter">
               <ul class="upload__filter-list reset-style-list">
                 <li class="upload__filter-item">
                   <img src="./img/icons/crop.svg" width="44" height="44" alt="crop">
+                  <input class="upload__filter-range-crop" type="range">
                 </li>
                 <li class="upload__filter-item">
                   <img src="./img/icons/fill.svg" width="48" height="43" alt="fill">
+                  <input class="upload__filter-range-fill" type="range">
                 </li>
                 <li class="upload__filter-item">
                   <img src="./img/icons/contrast.svg" width="32" height="32" alt="contrast">
+                  <input class="upload__filter-range-contrast" type="range">
                 </li>
               </ul>
               <input class="upload__filter-range" type="range">
             </div>
-            <button class="upload__button-post catalog-button" type="button">Запостить</button>
-            <button class="upload__button-cancel catalog-button" type="button">Отмена</button>
+            <div class="upload__button-list">
+            <button class="upload__button--submit upload__button" type="button">Запостить</button>
+            <button class="upload__button--reset upload__button" type="button">Отмена</button>
           </div>
+        </div>
         </div>
       </section>
   </main>
@@ -188,8 +193,8 @@
   <!-- Футер -->
   <footer class="page-footer">
     <div class="page-footer__wrapper center">
-      <img src="./img/footer/glasses.svg" alt="glasses">
-      <img src="./img/footer/pink-black.png" alt="pink">
+      <img src="./img/footer/glasses.svg" alt="glasses" width="59" height="40">
+      <img src="./img/footer/pink-black.png" alt="pink" width="74" height="23">
       <div class="social">
         <ul class="social__list reset-style-list">
           <li class="social__item">

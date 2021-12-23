@@ -1,18 +1,4 @@
 
-// Colors
-
-$crimson: #d22856;
-$lightgrey: #f2f2f2;
-$darkblue: #283645;
-$lightgreen: #3dc644;
-
-/* Viewports */
-
-$mobile-width-only: 659px;
-$tablet-width: 660px;
-$desctop-width: 1200px;
-
-
 html {
   box-sizing: border-box;
 }
@@ -28,61 +14,17 @@ body {
   flex-direction: column;
   min-height: 100%;
   min-width: 320px;
+  max-width: 1200px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   background-color: #e5e5e5;
-  color: #283645;
+  color: $darkblue;
   overflow-x: hidden;
-}
-
-.center {
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 img {
   max-width: 100%;
   height: auto;
-}
-
-/* Сброс стилей списка */
-.reset-style-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Кнопка "Отправить форму" */
-.green-button-form {
-  background-color: #2aab6d;
-  font-size: 18px;
-  font-weight: 700;
-  border: none;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-/* Кнопки "Запостить" и "Отмена" (Каталог) */
-.catalog-button {
-  border: 0;
-  border-radius: 30px;
-  padding: 20px 0;
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 700;
 }

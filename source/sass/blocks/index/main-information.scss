@@ -26,31 +26,106 @@
   background-color: $lightgrey;
   text-align: center;
   padding-top: 60px;
+}
 
-  &__list {
-    text-align: center;
+.features__list {
+  text-align: center;
+}
+
+.features__item {
+  margin-bottom: 45px;
+}
+
+.features__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+/* Картинка */
+.features__image-wrapper {
+  position: relative;
+}
+
+/* Картинки на десктопе */
+.features__images-desctop {
+  display: none;
+}
+
+.features__study {
+  display: none;
+}
+
+
+/* Планшет */
+@media (min-width: $tablet-width) {
+  .main-information__title {
+    font-size: 40px;
+    line-height: 54px;
   }
 
-  &__item {
-    margin-bottom: 45px;
+  .features {
+    text-align: left;
   }
 
-  &__title {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
+  .features__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
-  /* Картинка */
-  &__image-wrapper {
-    position: relative;
+  .features__list {
+    order: 2;
+    text-align: left;
   }
 
-  &__img-screen {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 40px;
+  .features__study {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 20px;
+    background-color: #ffffff;
+  }
+
+  .features__study-title {
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+  }
+
+  .features__study-link {
+    color: $crimson;
+  }
+}
+
+
+/* Desktop */
+@media (min-width: $desktop-width) {
+  .features__wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+  }
+
+  .features__image-wrapper {
+    display: none;
+  }
+
+  .features__list {
+    display: flex;
+  }
+
+  .features__images-desctop {
+    display: flex;
+  }
+
+  .features__image-1,
+  .features__image-2,
+  .features__image-3 {
+    display: block;
+  }
+
+  .features__iphone {
+    width: 300px;
   }
 }

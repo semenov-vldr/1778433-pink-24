@@ -1,53 +1,75 @@
 .price {
   background-color: $lightgrey;
   padding: 127px 0 50px 0;
-
-  &__table {
-    width: 100%;
-    background-color: #ffffff;
-  }
-
-  &__header {
-    background-color: $darkblue;
-  }
-
-  &__hit {
-    color: #ffffff;
-    background-color: $crimson;
-    line-height: 30px;
-  }
-
-  /* Наименование тарифа */
-  &__title-name {
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0;
-  }
-
-  /* Стоимость тарифа */
-  &__title-value {
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 300;
-    color: #ffffff;
-    margin: 0;
-  }
-
-  &__item-text {
-    text-transform: uppercase;
-    padding: 25px 0 25px 22px;
-    line-height: 30px;
-  }
-
-  &__check {
-    text-align: center;
-  }
 }
+
+.price__table {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.price__table-full {
+  display: none;
+}
+
+.price__header {
+  background-color: $darkblue;
+}
+
+.price__hit {
+  color: #ffffff;
+  background-color: $crimson;
+  line-height: 30px;
+}
+
+/* Наименование тарифа */
+.price__title-name {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Стоимость тарифа */
+.price__title-value {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0;
+}
+
+.price__item-text {
+  text-transform: uppercase;
+  padding: 25px 0 25px 22px;
+  line-height: 30px;
+}
+
+.price__check {
+  text-align: center;
+}
+
 
 // Пагинация
 .price__slider {
   text-align: center;
+}
+
+
+/* Планшет */
+@media (min-width: $tablet-width) {
+  .price__table {
+    display: none;
+  }
+
+  .price__table-full {
+    display: table;
+    width: 100%;
+  }
+
+  .price__slider {
+    display: none;
+  }
 }
