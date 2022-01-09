@@ -1,93 +1,102 @@
+// .line {  // центр (убрать)
+//   position: absolute;
+//   width: 1px;
+//   height: 3600px;
+//   background-color: red;
+//   left: 50%;
+//   z-index: 3;
+// }
+
 .cover-main {
-  &__wrapper {
-    position: relative;
-    background-image: url();
-
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 462px;
-    background-color: #1d2631;
-  }
-
-  &__title {
-    color: #ffffff;
-    font-size: 24px;
-    line-height: 29px;
-    font-weight: 300;
-    text-align: center;
-    margin: 0;
-    padding-top: 95px;
-  }
-
-  &__phone {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-
-  &__app {
-    background-color: #1d2631;
-    padding: 28px 0 38px 0;
-  }
-
-  /* Ссылка "Скачайте приложение" */
-  &__app-link {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: 700;
-    border: 3px solid #ffffff;
-    margin-bottom: 38px;
-    padding: 21px 35px;
-    border-radius: 29px;
-  }
-
-  /* OS */
-  &__app-list {
-    display: flex;
-    gap: 35px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Доступно для Iphone... */
-  &__app-text {
-    color: #ffffff;
-    text-align: center;
-    font-weight: 300;
-    margin: 0;
-    margin-top: 28px;
-  }
+  position: relative;
+  min-height: 462px;
+  background-color: #1d2631;
+  background-image: url(../img/main/back-wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
+.cover-main__title {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 34px;
+}
+
+.cover-main__app {
+  background-color: #1d2631;
+  padding: 28px 0 38px 0;
+}
+
+/* Ссылка "Скачайте приложение" */
+.cover-main__app-link {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  border: 3px solid #ffffff;
+  margin-bottom: 38px;
+  padding: 18px 35px;
+  border-radius: 29px;
+}
+
+/* OS */
+.cover-main__app-list {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Доступно для Iphone... */
+.cover-main__app-text {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+  margin-top: 28px;
+}
+
 
 /* Планшет */
 @media (min-width: $tablet-width) {
+  .cover-main {
+    min-height: 730px;
+  }
+
+  .cover-main__conteiner {
+    width: 340px;
+  }
+
   .cover-main__title {
     font-size: 40px;
     line-height: 48px;
     width: 240px;
     padding-top: 212px;
+    margin: 0 auto;
   }
 
-  .cover-main__wrapper {
-    height: 660px;
+  .cover-main__phone {
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 
   .cover-main__app {
-    position: absolute;
-    padding: 0;
-    bottom: 200px;
-    left: 20px;
-    width: 300px;
     background: none;
+    padding: 0;
   }
 
   .cover-main__app-wrapper {
     margin: 0;
-    padding: 0;
   }
 
   .cover-main__app-text {
@@ -98,6 +107,14 @@
 
 /* Desktop */
 @media (min-width: $desktop-width) {
+    .cover-main__title {
+    font-size: 50px;
+  }
+
+  .cover-main__app-wrapper {
+    padding: 0;
+  }
+
   .cover-main__app {
     position: relative;
     left: 130px;

@@ -9,6 +9,10 @@
   flex-direction: column;
 }
 
+.page__footer-logo {
+  margin: 0 auto;
+}
+
 .social__list {
   display: flex;
   gap: 10px;
@@ -16,22 +20,28 @@
   margin: 40px 0;
 }
 
-.social__item {
-  border: 3px solid rgb(40, 54, 69, 0.1);
-  border-radius: 50%;
-  padding: 15px;
+.social__link {
+  display: block;
 }
 
 
+.footer__developed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
 /* Планшет */
 @media (min-width: $tablet-width) {
-  .page-footer__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  .page-footer {
+    padding: 0;
   }
 
-  .developed {
-    display: flex;
+  .page-footer__wrapper {
+    flex-direction: row;
+    align-items: center;
   }
+
+
 }

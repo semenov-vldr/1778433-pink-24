@@ -1,25 +1,51 @@
 .price {
   background-color: $lightgrey;
-  padding: 127px 0 50px 0;
+  padding: 127px 0 30px 0;
+}
+
+// Убираем padding в мобильной версии
+@media (max-width: $mobile-width-only) {
+  .price__wrapper {
+    padding: 0;
+  }
 }
 
 .price__table {
   width: 100%;
   background-color: #ffffff;
+  border-collapse: collapse;
+}
+
+/* Границы таблицы */
+.price__table td {
+  border: 2px solid #e5e5e5;
+}
+
+.price__header {
+  background-color: $darkblue;
+  padding: 20px 20px 35px 20px;
 }
 
 .price__table-full {
   display: none;
 }
 
-.price__header {
-  background-color: $darkblue;
-}
-
 .price__hit {
+  position: absolute;
+  left: -30px;
+  padding: 0 20px;
+  width: 100px;
   color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 400;
   background-color: $crimson;
   line-height: 30px;
+  transform: rotate(-45deg);
+}
+
+.price__title {
+  padding: 12px 20px 27px 22px;
+  overflow: hidden;
 }
 
 /* Наименование тарифа */
@@ -43,7 +69,7 @@
 
 .price__item-text {
   text-transform: uppercase;
-  padding: 25px 0 25px 22px;
+  padding: 15px 0 15px 22px;
   line-height: 30px;
 }
 
@@ -51,15 +77,52 @@
   text-align: center;
 }
 
-
 // Пагинация
 .price__slider {
   text-align: center;
+  padding-top: 30px;
+}
+
+.price__slider-dots {
+  border: none;
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba($darkblue, 0.3);
+
+  &:not(:last-child) {
+    margin-right: 19px;
+  }
+
+  &:hover {
+    background-color: rgba($darkblue, 0.6);
+  }
+
+  &:active {
+    background-color: rgba($darkblue, 0.1);
+  }
+}
+
+.price__slider-dots-current {
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid $darkblue;
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+  }
 }
 
 
 /* Планшет */
 @media (min-width: $tablet-width) {
+
   .price__table {
     display: none;
   }
@@ -67,6 +130,36 @@
   .price__table-full {
     display: table;
     width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    margin-bottom: 70px;
+  }
+
+  .price__header th,
+  .price__table-full td {
+    border: 2px solid #e5e5e5;
+  }
+
+  .price__header th {
+    width: 25%;
+  }
+
+  .price__title--empty {
+    background-color: #F2F2F2;
+    border: none;
+  }
+
+  .price__title--standart {
+    position: relative;
+  }
+
+  .price__hit {
+    left: 0;
+  }
+
+  .price__item-text {
+    padding-left: 15px;
+    text-transform: capitalize;
   }
 
   .price__slider {

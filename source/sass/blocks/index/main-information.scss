@@ -1,131 +1,32 @@
-.main-information {
-  &__wrapper {
-    background-color: #ffffff;
-    text-align: center;
-  }
-
-  &__titles {
-    padding: 46px 0 70px 0;
-  }
-
-  &__title {
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 29px;
-    text-align: center;
-    margin: 0;
-  }
-
-  &__title:not(:last-child) {
-    padding-bottom: 35px;
-  }
-}
-
-/* Преимущества */
-.features {
-  background-color: $lightgrey;
-  text-align: center;
-  padding-top: 60px;
-}
-
-.features__list {
+.main-information__wrapper {
+  background-color: #ffffff;
   text-align: center;
 }
 
-.features__item {
-  margin-bottom: 45px;
+.main-information__titles {
+  padding: 46px 0 70px 0;
 }
 
-.features__title {
-  font-size: 18px;
-  font-weight: 700;
+.main-information__title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  text-align: center;
   margin: 0;
-  padding: 0;
-}
 
-/* Картинка */
-.features__image-wrapper {
-  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
 }
-
-/* Картинки на десктопе */
-.features__images-desctop {
-  display: none;
-}
-
-.features__study {
-  display: none;
-}
-
 
 /* Планшет */
 @media (min-width: $tablet-width) {
   .main-information__title {
     font-size: 40px;
     line-height: 54px;
-  }
 
-  .features {
-    text-align: left;
-  }
-
-  .features__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .features__list {
-    order: 2;
-    text-align: left;
-  }
-
-  .features__study {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 50px 20px;
-    background-color: #ffffff;
-  }
-
-  .features__study-title {
-    font-size: 30px;
-    line-height: 36px;
-    text-align: left;
-  }
-
-  .features__study-link {
-    color: $crimson;
-  }
-}
-
-
-/* Desktop */
-@media (min-width: $desktop-width) {
-  .features__wrapper {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    row-gap: 60px;
-  }
-
-  .features__image-wrapper {
-    display: none;
-  }
-
-  .features__list {
-    display: flex;
-  }
-
-  .features__images-desctop {
-    display: flex;
-  }
-
-  .features__image-1,
-  .features__image-2,
-  .features__image-3 {
-    display: block;
-  }
-
-  .features__iphone {
-    width: 300px;
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }

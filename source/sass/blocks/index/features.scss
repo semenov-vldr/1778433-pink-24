@@ -1,0 +1,81 @@
+/* Преимущества */
+.features {
+  background-color: $lightgrey;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.features__list {
+  text-align: center;
+}
+
+.features__item {
+  margin-bottom: 43px;
+
+  &:last-child {
+    margin-bottom: 48px;
+  }
+}
+
+.features__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+/* Картинки на десктопе (айфоны) */
+.features__images-desctop {
+  display: none;
+}
+
+.features__study {
+  display: none;
+}
+
+.features__study-title {
+  color: #000000;
+}
+
+
+/* Планшет */
+@media (min-width: $tablet-width) {
+  .features {
+    text-align: left;
+  }
+
+  .features__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .features__list {
+    order: 2;
+    text-align: left;
+  }
+
+  .features__text br {
+    display: none;
+  }
+
+  .features__study {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #ffffff;
+    justify-content: start;
+  }
+
+  .features__study-title {
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+    width: 170px;
+  }
+
+  .features__study-link {
+    color: $crimson;
+  }
+}

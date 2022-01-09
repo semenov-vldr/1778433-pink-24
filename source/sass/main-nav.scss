@@ -12,6 +12,7 @@
   text-align: center;
 }
 
+/* Пункт меню */
 .main-nav__item {
   background-color: $darkblue;
   padding: 15px 0;
@@ -19,6 +20,7 @@
   box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
+/* Ссылка меню */
 .main-nav__link {
   display: block;
   font-size: 18px;
@@ -27,13 +29,113 @@
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
+
+  &:hover {
+    color: $crimson;
+  }
+
+  &:active {
+    color: rgba($crimson, 0.3);
+  }
 }
 
 /* Кнопка Бургер */
-.main-nav__toogle {
-  padding: 0;
+.main-nav__toggle {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  display: block;
+  cursor: pointer;
   background: none;
   border: none;
+  padding: 0;
+}
+
+/* Кнопка Бургер */
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+  transition: 0.1s;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: $crimson;
+  box-shadow: 0 8px 0 0 $crimson, 0 16px 0 0 $crimson;
+}
+
+  .main-nav--closed .main-nav__toggle:active::before {
+    background-color: rgba($crimson, 30%);
+    box-shadow: 0 8px 0 0 rgba($crimson, 30%), 0 16px 0 0 rgba($crimson, 30%);
+  }
+
+  @media (max-width: $mobile-width-only) and (min-width: $tablet-width) {
+
+    /* Скрыть пункты меню когда меню закрыто */
+    .main-nav--closed .main-nav__item {
+      display: none;
+    }
+
+
+  /* Кнопка навигации отсутствует, если не работает js */
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
+}
+
+/* Показать меню при открытом состоянии */
+.main-nav--opened .main-nav__wrapper {
+  display: block;
+}
+
+/* Кнопка "крестик" при открытом состоянии*/
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    width: 32px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: linear 0.1s;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    box-shadow: none;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: $crimson;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba($crimson, 30%);
+  }
 }
 
 
@@ -46,20 +148,18 @@
 
 /* Desktop */
 @media (min-width: $desktop-width) {
-  .main-nav__list {
-    display: flex;
-    gap: 78px;
-  }
-
-  .main-nav__toogle {
-    display: none;
-  }
-
   .main-nav__wrapper {
     position: relative;
+    width: 66%;
+    max-width: 620px;
     top: 0;
     background: none;
     display: block;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: flex-start;
   }
 
   .main-nav__item {
@@ -67,6 +167,24 @@
     padding: 0;
     margin-top: 0;
     box-shadow: none;
+
+    &:not(:last-child) {
+      margin-right: 78px;
+    }
+
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background-color: #ffffff;
+      }
+    }
   }
 
   .main-nav__link {
@@ -74,7 +192,16 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 18px;
+    padding: 13px 0;
     color: #ffffff;
     text-transform: capitalize;
+
+    &:active {
+      color: rgba(#ffffff, 0.3);
+    }
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 }

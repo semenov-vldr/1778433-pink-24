@@ -1,7 +1,7 @@
 .contacts {
   background-color: #ffffff;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 45px;
 }
 
 .contacts__wrapper {
@@ -18,8 +18,8 @@
 .contacts__title {
   font-size: 18px;
   font-weight: 700;
-  margin: 0;
-  margin-top: 13px;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 
 .contacts__item {
@@ -30,6 +30,15 @@
   line-height: 32px;
   font-weight: 300;
   margin-bottom: 35px;
+  cursor: pointer;
+
+  &:hover {
+    color: $darkblue;
+  }
+
+  &:active {
+    color: rgba($darkblue, 0.3);
+  }
 }
 
 
@@ -71,6 +80,10 @@
     display: grid;
     grid-template-areas:
     "A A A"
-    "B C D";
+    "B D C";
+  }
+
+  .contacts__title {
+    margin-bottom: 30px;
   }
 }
