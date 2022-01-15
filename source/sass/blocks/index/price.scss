@@ -32,9 +32,12 @@
 
 .price__hit {
   position: absolute;
-  left: 20px;
+  left: -30px;
   padding: 0 20px;
+  width: 100px;
   color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 400;
   background-color: $crimson;
   line-height: 30px;
   transform: rotate(-45deg);
@@ -42,6 +45,7 @@
 
 .price__title {
   padding: 12px 20px 27px 22px;
+  overflow: hidden;
 }
 
 /* Наименование тарифа */

@@ -62,7 +62,7 @@
   border-radius: 5px;
   background-color: #ffffff;
   box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 .main-nav--closed .main-nav__toggle:hover::before {
@@ -114,7 +114,7 @@
     width: 32px;
     height: 3px;
     background-color: #ffffff;
-    transition: linear 0.2s;
+    transition: linear 0.1s;
   }
 
   &::before {

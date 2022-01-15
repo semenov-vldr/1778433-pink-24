@@ -1,7 +1,6 @@
 .slider-reviews {
   position: relative;
   background-color: #ffffff;
-  margin-top: -43px;
   padding: 50px 0;
 }
 
@@ -73,7 +72,7 @@
     padding-top: 100px;
   }
 
-  .slider-reviews__wrapper {
+  .slider-reviews__item {
     display: flex;
     flex-direction: column;
   }
@@ -86,8 +85,8 @@
 
   .slider-reviews__quote {
     order: -1;
-    margin-bottom: 35px;
     margin: 0 auto;
+    margin-bottom: 35px;
   }
 
   .slider-reviews__quote-text {
@@ -110,32 +109,28 @@
   .slider-reviews__wrapper {
     position: relative;
 
-    // Стрелка влево
-    &::before {
-      position: absolute;
-      content: "";
-      background-image: url(../img/reviews/left-arrow.svg);
-      width: 22px;
-      height: 41px;
-      left: 0;
-      top: 50%;
-      cursor: pointer;
-    }
-
-    // Стрелка вправо
+    &::before,
     &::after {
       position: absolute;
       content: "";
       background-image: url(../img/reviews/left-arrow.svg);
       width: 22px;
       height: 41px;
-      right: 0;
       top: 50%;
-      transform: rotate(180deg);
       cursor: pointer;
     }
-  }
 
+    // Стрелка влево
+    &::before {
+      left: 0;
+    }
+
+    // Стрелка вправо
+    &::after {
+      right: 0;
+      transform: rotate(180deg);
+    }
+  }
 
   .slider-reviews__quote-text {
     width: 690px;

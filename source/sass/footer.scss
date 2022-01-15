@@ -9,7 +9,7 @@
   flex-direction: column;
 }
 
-.page-footer__wrapper > img {
+.page__footer-logo {
   margin: 0 auto;
 }
 
@@ -20,8 +20,12 @@
   margin: 40px 0;
 }
 
+.social__link {
+  display: block;
+}
 
-.developed {
+
+.footer__developed {
   display: flex;
   align-items: center;
   justify-content: center;
