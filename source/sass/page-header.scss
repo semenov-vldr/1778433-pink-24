@@ -20,6 +20,7 @@
 /* Desktop */
 @media (min-width: $desktop-width) {
   .page-header__wrapper {
+    display: flex;
     justify-content: space-between;
   }
 }

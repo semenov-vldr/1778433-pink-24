@@ -1,5 +1,7 @@
 .form {
+  position: relative;
   background-color: #ffffff;
+  margin-top: -225px;
 }
 
 .form__user {
@@ -12,6 +14,7 @@
   line-height: 30px;
   font-weight: 400;
   margin: 0;
+  padding-top: 54px;
   text-align: center;
 }
 
@@ -21,22 +24,35 @@
 
 .form__wrapper {
   background-color: $lightgrey;
+
+  &:nth-child(even) {
+    background-color: #ffffff;
+  }
 }
 
 .form__user-item {
-  padding: 42px 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 29px;
+  border: none;
+  padding: 44px 0;
+}
+
+input, textarea {
+  border: 2px solid #E5E5E5;
 }
 
 .form__user-label {
   color: $crimson;
   line-height: 30px;
-  padding: 0 24px;
   text-transform: uppercase;
 }
 
 .form__user-input {
   width: 100%;
   padding: 23px 20px;
+  margin-top: 7px;
 }
 
 .form__user-input[placeholder] {
@@ -44,8 +60,7 @@
   font-size: 18px;
 }
 
-/* Список достижений */
-
+/* Список достижений (checkbox) */
 .form__user-progress-item {
   font-size: 18px;
   line-height: 30px;
@@ -55,24 +70,118 @@
   margin-bottom: 47px;
 }
 
+// Label чекбокса
+.form__user-control-label {
+  display: inline-flex;
+  align-items: center;
+
+  // Квадрат для чекбокса
+  &::before {
+    content: "";
+    display: inline-block;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 35px;
+    height: 35px;
+    margin-right: 22px;
+    background-color: #ffffff;
+    border: 2px solid #E5E5E5;
+    border-radius: 1px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover::before {
+    border-color: $darkblue;
+  }
+
+  &:active::before {
+    border-color: $crimson;
+  }
+}
+
+// Галочка при checked
+.form__user-control-input:checked + .form__user-control-label::before {
+  background-image: url(../img/icons/tick.svg);
+  background-repeat: no-repeat;
+  background-size: 22px 16px;
+}
+
 /* Заголовки чек-бокса, радио-кнопок и комментариев */
 .form__user-item-title {
   text-transform: uppercase;
   color: $crimson;
   text-align: center;
+  padding-top: 44px;
+
+  &--contact {
+    display: none;
+  }
 }
 
-/* Список OS */
+.form__user-label--contact {
+  margin-left: 24px;
+}
+
+.form__user-OS-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 38px;
+}
+
+/* Пункты OS (radio) */
 .form__user-OS-item {
   font-size: 18px;
   line-height: 30px;
 }
 
-/* "Опишите свои эмоции" */
-.form__wrapper--comment {
-  background-color: #ffffff;
+.form__user-OS-control {
+  display: flex;
+  align-items: center;
+  column-gap: 31px;
 }
 
+// Круг для radio
+.form__user-OS-control-mark {
+  display: inline-block;
+  position: relative;
+  width: 37px;
+  height: 37px;
+  background-color: #ffffff;
+  border: 2px solid #E5E5E5;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover::before {
+    border-color: $darkblue;
+  }
+
+  &:active::before {
+    border-color: $crimson;
+  }
+}
+
+.form__user-OS-control-input:checked + .form__user-OS-control-mark::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $crimson;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form__wrapper--comment {
+  width: 100%;
+}
+
+
+// Поле для комментария
 .form__user-comment-area {
   width: 100%;
   text-align: center;
@@ -101,10 +210,16 @@
   margin-bottom: 46px;
 }
 
+// Надпись "Обязательные поля"
 .form__prompt {
   display: block;
   text-transform: uppercase;
   text-align: center;
+
+  // Звездочка (*)
+  & span {
+    color: $crimson;
+  }
 }
 
 
@@ -129,6 +244,7 @@
 
   .form__user {
     grid-template-columns: repeat(auto-fill, minmax(616px, 1fr));
+    row-gap: 60px;
   }
 
   .form__wrapper {
@@ -137,20 +253,50 @@
   }
 
   .form__user-item {
-    display: flex;
-    flex-direction: column;
     gap: 56px;
+    border: 2px solid #E5E5E5;
+    border-radius: 1px;
+    padding: 27px 62px;
+
+    &--name {
+      border: none;
+    }
+
+    &--contact {
+      gap: 30px;
+    }
+  }
+
+  .form__user-item-title {
+    padding: 0 25px;
+    line-height: 30px;
+
+    &--contact {
+      display: block;
+    }
   }
 
   .form__user-label {
     display: flex;
     align-items: center;
     flex-grow: 1;
+    column-gap: 20px;
     padding: 0;
   }
 
-  .form__user-input {
-    margin-left: 20px;
+  .form__user-OS-list,
+  .form__user-progress-list {
+    margin-left: 62px;
+  }
+
+  .form__user-item-input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__user-input--contact {
+    order: -1;
+    margin-bottom: 12px;
   }
 
   .form__wrapper--name {
@@ -170,10 +316,16 @@
   }
 
   .form__wrapper--comment {
-    width: 496px;
-    margin: 0 auto;
-    padding: 0;
     order: 5;
+  }
+
+  .form__user-control--comment {
+    padding: 0 62px;
+  }
+
+  .form__user-comment-area {
+    min-width: 496px;
+    margin: 0 auto;
   }
 
   .form__button-wrapper {
@@ -193,21 +345,54 @@
 
 /* Desktop */
 @media (min-width: $desktop-width) {
-.form__user {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+  .form__user {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 54px 74px;
+  }
 
-.form__title, .form__wrapper, .form__button-wrapper {
-  grid-column: 1 / -1;
-}
+  .form__user-item--name {
+    padding: 0;
+  }
 
-.form__wrapper--name {
-  grid-column: 1/2;
-}
+  .form__title, .form__wrapper, .form__button-wrapper {
+    grid-column: 1 / -1;
+  }
 
-.form__wrapper--OS {
-  grid-column: 2/3;
-}
+  .form__wrapper--name {
+    grid-column: 1/2;
+    padding: 0;
+    padding-left: 130px;
+  }
 
+  .form__wrapper--OS {
+    grid-column: 2/3;
+    padding: 0;
+    padding-right: 130px;
+  }
+
+  .form__user-item--contact {
+    flex-direction: row;
+    padding: 44px 62px 13px 62px;
+    column-gap: 74px;
+  }
+
+  .form__user-item-input {
+    width: 100%;
+  }
+
+  .form__user-progress-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 35px;
+  }
+
+  .form__user-progress-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .form__user-comment-area {
+    text-align: left;
+  }
 }
