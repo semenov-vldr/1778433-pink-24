@@ -57,7 +57,7 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url(../img/contacts/triangle-map-mobile.svg);
+    background-image: url("../img/contacts/triangle-map-mobile.svg");
     background-size: 100% 33px;
     background-repeat: no-repeat;
     background-position: 50% 0;
@@ -131,7 +131,7 @@
 
     &::before {
       content: "";
-      background-image: url(../img/contacts/triangle-map-tablet.svg);
+      background-image: url("../img/contacts/triangle-map-tablet.svg");
       background-size: 100% 67px;
       height: 67px;
     }
@@ -173,7 +173,7 @@
 
     &::before {
       content: "";
-      background-image: url(../img/contacts/triangle-map-desktop.svg);
+      background-image: url("../img/contacts/triangle-map-desktop.svg");
       background-size: 100% 104px;
       height: 104px;
     }

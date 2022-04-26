@@ -22,7 +22,6 @@
 
 /* Планшет */
 @media (min-width: $tablet-width) {
-
   .header-logo__image--mobile {
     display: none;
   }
@@ -34,7 +33,6 @@
 
 /* Desktop */
 @media (min-width: $desktop-width) {
-
   .header-logo__image--tablet {
     display: none;
   }

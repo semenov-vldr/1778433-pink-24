@@ -14,7 +14,7 @@
     right: 0;
     width: 100%;
     height: 88px;
-    background-image: url(../img/price/price-triangle.svg);
+    background-image: url("../img/price/price-triangle.svg");
     background-size: 100% 25px;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -127,13 +127,13 @@
   &--true {
     width: 31px;
     height: 23px;
-    background-image: url(../img/price/yes.svg);
+    background-image: url("../img/price/yes.svg");
   }
 
   &--false {
     width: 27px;
     height: 27px;
-    background-image: url(../img/price/no.svg);
+    background-image: url("../img/price/no.svg");
   }
 }
 
@@ -233,7 +233,7 @@
     justify-content: center;
 
     &::before {
-        content: "";
+      content: "";
     }
   }
 

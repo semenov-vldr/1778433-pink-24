@@ -83,13 +83,9 @@
   box-shadow: 0 8px 0 0 rgba($crimson, 30%), 0 16px 0 0 rgba($crimson, 30%);
 }
 
-// -------------
-
 @media (max-width: $desktop-width) {
-
   /* Кнопка "крестик" при открытом состоянии*/
   .main-nav__toggle.active {
-
     &::before,
     &::after {
       content: "";
@@ -157,7 +153,7 @@
   .main-nav__list {
     position: relative;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     flex-wrap: wrap;
     width: 620px;
     padding-top: 0;

@@ -18,12 +18,12 @@
     "gulp-webp": "4.0.1",
     "postcss": "8.3.11",
     "postcss-csso": "5.0.1",
-    "stylelint": "14.0.1",
+    "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "0.1.11"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/scss/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp"
@@ -46,6 +46,5 @@
   "engines": {
     "node": "16.13.0"
   },
-  "type": "module",
-  "dependencies": {}
+  "type": "module"
 }

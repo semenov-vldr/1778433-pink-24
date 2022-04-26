@@ -41,7 +41,7 @@
 // Range
 .upload__filter-range {
   position: relative;
-  -webkit-appearance: none;
+  appearance: none;
   border: none;
   width: 240px;
   display: block;
@@ -58,7 +58,7 @@
   }
 
   &::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    appearance: none;
     border: 2px solid $crimson;
     width: 14px;
     height: 14px;
