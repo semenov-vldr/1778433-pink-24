@@ -10,7 +10,6 @@ import postcss from "gulp-postcss";
 import rename from "gulp-rename";
 import sass from "gulp-dart-sass";
 import svgo from "gulp-svgmin";
-import twig from "gulp-twig";
 import webp from "gulp-webp";
 
 const IS_DEV = process.env.NODE_ENV === "development";
@@ -31,9 +30,7 @@ export const styles = () => {
 // HTML
 
 const html = () => {
-  return gulp.src("source/twig/*.twig")
-    .pipe(twig())
-    .pipe(gulp.dest("build"));
+  return gulp.src("source/*.html").pipe(gulp.dest("build"));
 };
 
 // Scripts
@@ -113,7 +110,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/*.js", gulp.series(scripts));
-  gulp.watch("source/twig/**/*.twig", gulp.series(html, reload));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 };
 
 // Build
