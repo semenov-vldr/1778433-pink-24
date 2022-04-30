@@ -3,20 +3,22 @@ import browser from "browser-sync";
 import csso from "postcss-csso";
 import del from "del";
 import gulp from "gulp";
+import gulpIf from "gulp-if";
 import imagemin from "gulp-imagemin";
 import plumber from "gulp-plumber";
 import postcss from "gulp-postcss";
 import rename from "gulp-rename";
 import sass from "gulp-dart-sass";
 import svgo from "gulp-svgmin";
-import svgstore from "gulp-svgstore";
 import webp from "gulp-webp";
+
+const IS_DEV = process.env.NODE_ENV === "development";
 
 // Styles
 
 export const styles = () => {
   return gulp
-    .src("source/sass/style.scss", { sourcemaps: true })
+    .src("source/sass/style.scss", { sourcemaps: IS_DEV })
     .pipe(plumber())
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss([autoprefixer(), csso()]))
@@ -42,24 +44,14 @@ const scripts = () => {
 
 // Images
 
-const optimizeImages = () => {
+const images = () => {
   return gulp
     .src("source/img/**/*.{png,jpg}")
-    .pipe(imagemin())
+    .pipe(gulpIf(!IS_DEV, imagemin()))
+    .pipe(gulp.dest("build/img"))
+    .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("build/img"));
 };
-
-const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg}").pipe(gulp.dest("build/img"));
-};
-
-// WebP
-
-const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("build/img"))
-}
 
 // SVG
 
@@ -123,19 +115,8 @@ const watcher = () => {
 
 // Build
 
-export const build = gulp.series(
-  clean,
-  copy,
-  optimizeImages,
-  gulp.parallel(styles, html, scripts, svg, sprite, createWebp)
-);
+export const build = gulp.series(clean, gulp.parallel(copy, images, styles, html, scripts, svg, sprite));
 
 // Default
 
-export default gulp.series(
-  clean,
-  copy,
-  copyImages,
-  gulp.parallel(styles, html, scripts, svg, sprite, createWebp),
-  gulp.series(server, watcher)
-);
+export default gulp.series(build, server, watcher);

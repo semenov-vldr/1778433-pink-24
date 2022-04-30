@@ -59,7 +59,7 @@
 
 .form__user-input,
 .form__user-comment-area {
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
 
   &:focus {
     border-color: $crimson;
@@ -125,7 +125,7 @@
     height: 35px;
     margin-right: 22px;
     background-color: #ffffff;
-    border: 2px solid #E5E5E5;
+    border: 2px solid #e5e5e5;
     border-radius: 1px;
     cursor: pointer;
     background-repeat: no-repeat;
@@ -142,8 +142,8 @@
 }
 
 // Галочка при checked
-.form__user-control-input:checked+.form__user-control-label::before {
-  background-image: url(../img/icons/tick.svg);
+.form__user-control-input:checked + .form__user-control-label::before {
+  background-image: url("../img/icons/tick.svg");
   background-repeat: no-repeat;
   background-size: 22px 16px;
 }
@@ -191,7 +191,7 @@
   width: 37px;
   height: 37px;
   background-color: #ffffff;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 50%;
   cursor: pointer;
 
@@ -200,7 +200,7 @@
   }
 
   &:focus {
-    border:2px dashed $crimson;
+    border: 2px dashed $crimson;
   }
 
   &:active {
@@ -208,7 +208,7 @@
   }
 }
 
-.form__user-os-control-input:checked+.form__user-os-control-mark::before {
+.form__user-os-control-input:checked + .form__user-os-control-mark::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -259,7 +259,7 @@
   text-transform: uppercase;
 
   &:hover {
-    background-color: #1C9B5E;
+    background-color: #1c9b5e;
   }
 
   &:active {
@@ -355,7 +355,7 @@
 
   .form__user-item {
     gap: 56px;
-    border: 2px solid #E5E5E5;
+    border: 2px solid #e5e5e5;
     border-radius: 1px;
     padding: 27px 0 53px;
 
@@ -432,14 +432,14 @@
     &--tel::after {
       content: "";
       position: absolute;
-      background-image: url(../img/icons/phone-icon.svg);
+      background-image: url("../img/icons/phone-icon.svg");
       background-color: #e5e5e5;
     }
 
     &--email::after {
       content: "";
       position: absolute;
-      background-image: url(../img/icons/mail-icon.svg);
+      background-image: url("../img/icons/mail-icon.svg");
       background-color: #e5e5e5;
     }
   }

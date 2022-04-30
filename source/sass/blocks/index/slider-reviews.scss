@@ -120,7 +120,6 @@
 
 /* Desktop */
 @media (min-width: $desktop-width) {
-
   .slider-reviews {
     padding-top: 72px;
     padding-bottom: 43px;
@@ -133,7 +132,7 @@
   // Стрелки
   .slider-reviews__arrow {
     position: absolute;
-    background-image: url(../img/reviews/left-arrow.svg);
+    background-image: url("../img/reviews/left-arrow.svg");
     background-repeat: no-repeat;
     width: 22px;
     height: 41px;
